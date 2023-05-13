@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Button, Entry
+from tkinter import Tk, Label, Button, Entry, PhotoImage
 
 # Create an object of Tk Class
 root = Tk()
@@ -11,6 +11,15 @@ root.geometry('700x400')
 
 # Set the backgroud color of the root window
 root.config(bg="#405DE6")
+
+# create an object of logo file
+logo_image = PhotoImage(file='instagram.png')
+
+# Label for Logo image
+logo_label = Label(root, image=logo_image, bg='#405DE6')
+logo_label.place(x=90, y=310)
+logo_label = Label(root, image=logo_image, bg='#405DE6')
+logo_label.place(x=570, y=310)
 
 # Label for the heading
 heading = Label(root, text='Instagram Profile Pic\n Downloader',
