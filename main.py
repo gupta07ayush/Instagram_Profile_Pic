@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Button, Entry, PhotoImage
+from tkinter import Tk, Label, Button, Entry, PhotoImage, messagebox
 import instaloader
 
 
@@ -8,8 +8,17 @@ insta_obj = instaloader.Instaloader()
 
 # Function which will download the instagram profile Pic
 def download():
+    # get the user name from entry box
     username = user_entry.get()
+
+    # download the profile pic
     insta_obj.download_profile(username, profile_pic_only=True)
+
+    # Display this message in terminal
+    print('Downloading Image')
+
+    # display the message after downloading the image
+    messagebox.showinfo('Success', 'Profile Pic is successfully downloaded.')
 
 
 # Create an object of Tk Class
