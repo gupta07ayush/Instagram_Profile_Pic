@@ -16,6 +16,7 @@ def download():
 
     # Display this message in terminal
     print('Downloading Image')
+    print(insta_obj.load_profile_id(username))
 
     # display the message after downloading the image
     messagebox.showinfo('Success', 'Profile Pic is successfully downloaded.')
