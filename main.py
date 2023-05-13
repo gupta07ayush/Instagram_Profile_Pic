@@ -1,4 +1,16 @@
 from tkinter import Tk, Label, Button, Entry, PhotoImage
+import instaloader
+
+
+# create object of instaloader class
+insta_obj = instaloader.Instaloader()
+
+
+# Function which will download the instagram profile Pic
+def download():
+    username = user_entry.get()
+    insta_obj.download_profile(username, profile_pic_only=True)
+
 
 # Create an object of Tk Class
 root = Tk()
@@ -40,7 +52,7 @@ user_entry.configure(insertbackground='yellow')
 
 # Download Button
 download_button = Button(root, text="Download", border=10, cursor='circle #833AB4',
-                         bg="#FD1D1D", fg='black', font=('Helvetika', 18, 'bold'))
+                         bg="#FD1D1D", fg='black', font=('Helvetika', 18, 'bold'), command=download)
 download_button.place(x=260, y=310, width=200, height=60)
 
 
