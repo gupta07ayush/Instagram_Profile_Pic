@@ -1,4 +1,4 @@
-from tkinter import Tk, Label, Button
+from tkinter import Tk, Label, Button, Entry
 
 # Create an object of Tk Class
 root = Tk()
@@ -21,6 +21,10 @@ heading.place(x=20, y=20, width=660, height=150)
 user_label = Label(root, text="Enter User Name:",
                    bg="#FCAF45", fg='black', font=('Helvetika', 14, 'bold'))
 user_label.place(x=20, y=200, width=200, height=40)
+
+user_entry = Entry(root, bg="#C13584", fg='white', border=5,
+                   font=('Helvetika', 14, 'bold'))
+user_entry.place(x=240, y=200, width=440, height=40)
 
 
 # Start the GUI
